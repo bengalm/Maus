@@ -150,7 +150,7 @@ public class Client {
                 if (SYSTEMOS.contains("Windows")) {
                     pb = new ProcessBuilder("cmd.exe", "/c", command);
                 } else if (SYSTEMOS.contains("Linux")) {
-                    pb = new ProcessBuilder();
+                    pb = new ProcessBuilder(command);
                 }
                 if (pb != null) {
                     pb.redirectErrorStream(true);
